@@ -82,7 +82,7 @@ router.put('/update/:id', (req, res) => {
         incomeSource: req.body.debits.incomeSource,
         incomeAmount: req.body.debits.incomeAmount,
         incomeDate: req.body.debits.incomeDate,
-        userID: req.user.id //Maybe this is needed here?
+        // userID: req.user.id //Maybe this is needed here?
     }
 
     Debits.update(incomeUpdate, { 

@@ -11,7 +11,7 @@ router.post('/signup', (req, res) => {
     const signupUser = {
         firstName: req.body.user.firstName,
         lastName: req.body.user.lastName,
-        username: req.body.user.username,
+        // username: req.body.user.username,
         email: req.body.user.email,
         password: bcrypt.hashSync(req.body.user.password, 10)
     }
@@ -35,9 +35,9 @@ router.post('/signup', (req, res) => {
 ***********/
 router.post('/login', (req, res) => {
     User.findOne({ 
-        // Either with username or email
         where: { 
-            username: req.body.user.username }
+            email: req.body.user.email
+        }
     })
     .then(user => {
         if(user) {
@@ -60,11 +60,6 @@ router.post('/login', (req, res) => {
     })
     .catch(err => res.status(501).send({ error: 'failed to process' }))
 })
-
-/****************
-* UPDATE USERNAME
-****************/
-
 
 /**************
 * UPDATE E-MAIL
