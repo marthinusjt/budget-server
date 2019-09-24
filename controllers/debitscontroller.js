@@ -11,10 +11,7 @@ router.get('/all', (req, res) => {
         }
     }).then(
         findSuccess = (data) => {
-            res.status(200).json({
-                debits: data,
-                message: `All Income for User Fetched`
-            })
+            res.status(200).json(data)
         },
         findFail = () => {
             res.status(500).json({

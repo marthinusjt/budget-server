@@ -8,6 +8,7 @@ const user = require('./controllers/usercontroller');
 const debits = require('./controllers/debitscontroller')
 const credits = require('./controllers/creditscontroller')
 const sequelize = require('./db');
+// const moment = require('moment');
 
 sequelize.sync();
 // sequelize.sync({force: true}); // tip: {force: true} for resetting tables

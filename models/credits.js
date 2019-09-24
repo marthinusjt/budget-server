@@ -8,7 +8,7 @@ module.exports = (sequelize, Datatypes) => {
             allowNull: false
         },
         expenseDate: {
-            type: Datatypes.DATE
+            type: Datatypes.DATEONLY
         },
         userID: {
             type: Datatypes.INTEGER
