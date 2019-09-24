@@ -9,10 +9,7 @@ module.exports = (sequelize, Datatypes) => {
             allowNull: false
         },
         incomeDate: {
-            type: Datatypes.DATEONLY,
-            // get: function() {
-            //     return moment(this.getDataValue('DateTime').format('DD.MM.YYYY'))
-            // }
+            type: Datatypes.DATEONLY
         },
         userID: {
             type: Datatypes.INTEGER
