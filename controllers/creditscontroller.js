@@ -79,7 +79,7 @@ router.put('/update/:id', (req, res) => {
         expenseName: req.body.credits.expenseName,
         expenseAmount: req.body.credits.expenseAmount,
         expenseDate: req.body.credits.expenseDate,
-        userID: req.user.id //Maybe this is needed here?
+        // userID: req.user.id //Maybe this is needed here?
     }
 
     Credits.update(expenseUpdate, { 
